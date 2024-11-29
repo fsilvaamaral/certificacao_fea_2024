@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: erp
+    description: Sistema de dados de venda da Adventure Works
+    database: fea24_9
+    schema: raw_adventure_works
+    tables:
+      - name: customer
+        description: Dados da fonte dos clientes.
+        columns:
+          - name: customerid
+            tests:
+              - unique
+              - not_null
+                  

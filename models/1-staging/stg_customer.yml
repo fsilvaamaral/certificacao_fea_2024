@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: stg_customer
+    description: Tabela staging que contém os dados brutos de clientes, originários do sistema ERP. Esta tabela serve como base para as próximas transformações e análises.
+    columns:
+      - name: PK_CLIENTE
+        description: Chave primária única que identifica cada cliente na tabela.
+
+      - name: ID_CLIENTE
+        description: Identificador do cliente no sistema. Pode ser diferente da chave primária em casos de múltiplas identificações para o mesmo cliente.
+
+      - name: ID_LOJA
+        description: Identificador da loja à qual o cliente está associado. Permite agrupar clientes por loja para análises.
+        
+      - name: ID_TERRITORIO
+        description: Identificador do território de vendas ao qual o cliente pertence. Utilizado para segmentar clientes por região geográfica.
