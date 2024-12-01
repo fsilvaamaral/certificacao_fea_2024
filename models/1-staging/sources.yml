@@ -20,4 +20,13 @@ sources:
             tests:
               - unique
               - not_null
+
+      - name: productcategory
+        description: Dados da fonte de categoria de produtos.
+        columns:
+          - name: PRODUCTCATEGORYID
+            tests:
+              - unique
+              - not_null
+                  
                   
