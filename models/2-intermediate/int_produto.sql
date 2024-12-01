@@ -28,8 +28,10 @@ with
         , fonte_produto.produto
         , fonte_produto.cor_produto
         , fonte_produto.numero_produto
-        , fonte_categoria.categoria_produto
+        , fonte_produto.id_subcategoria_produto
         , fonte_subcategoria.subcategoria_produto
+        , fonte_categoria.id_categoria_produto
+        , fonte_categoria.categoria_produto
         from fonte_produto
         left join fonte_subcategoria on fonte_produto.id_subcategoria_produto = fonte_subcategoria.id_subcategoria_produto
         left join fonte_categoria on fonte_subcategoria.id_categoria_produto = fonte_categoria.id_categoria_produto
