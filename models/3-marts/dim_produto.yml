@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: dim_produto
+    description: Dimensão que contém todas as informações relevantes sobre os produtos, incluindo atributos descritivos e hierarquias, para análise e relatórios.
+    columns:
+      - name: ID_PRODUTO
+        description: Chave primária da dimensão, correspondente ao identificador único do produto. Serve como referência para as tabelas de fatos.
+        tests:
+          - unique
+          - not_null
+      - name: PRODUTO
+        description: Nome completo e descritivo do produto, utilizado para identificação e busca.
+      - name: COR_PRODUTO
+        description: Cor principal do produto, utilizada para segmentação e análise por cor.
+      - name: NUMERO_PRODUTO
+        description: Número de identificação do produto, utilizado para rastreabilidade e cross-referência com outros sistemas.
+      - name: CATEGORIA_PRODUTO
+        description: Categoria à qual o produto pertence, permitindo agrupar produtos por categoria para análise.
+      - name: SUBCATEGORIA_PRODUTO
+        description: Subcategoria à qual o produto pertence, fornecendo um nível de detalhamento adicional à categoria.

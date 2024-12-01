@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: stg_product
+    description: Tabela staging que contém os dados brutos de cada produto, incluindo informações como nome, cor, custo e preço de lista.
+    columns:
+      - name: ID_PRODUTO
+        description: Identificador único do produto no sistema fonte. Serve como chave primária para esta tabela.
+      - name: PRODUTO
+        description: Nome do produto, como descrito no catálogo do fornecedor.
+      - name: COR_PRODUTO
+        description: Cor principal do produto. Pode ser utilizado para filtrar produtos por cor em análises.
+      - name: CUSTO_PADRAO_PRODUTO
+        description: Custo padrão do produto, utilizado para calcular a margem de lucro.
+      - name: PRECO_LISTA_PRODUTO
+        description: Preço de lista do produto, utilizado para precificação nas vendas.
+      - name: ID_SUBCATEGORIA_PRODUTO
+        description: Identificador da subcategoria à qual o produto pertence, estabelecendo uma relação com a tabela `stg_productsubcategory`.
+      - name: NUMERO_PRODUTO
+        description: Número de identificação do produto, utilizado para rastrear o produto no estoque e em outros sistemas.

@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: stg_productcategory
+    description: Tabela staging que contém os dados brutos das categorias de produtos.
+    columns:
+      - name: ID_CATEGORIA_PRODUTO
+        description: Identificador único da categoria do produto no sistema fonte.
+      - name: CATEGORIA_PRODUTO
+        description: Nome da categoria do produto, como "Eletrônicos", "Vestuário" ou "Alimentos".

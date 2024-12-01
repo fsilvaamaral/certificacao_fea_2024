@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: stg_productsubcategory
+    description: Tabela staging que contém os dados brutos das subcategorias de produtos, fornecendo um nível de detalhamento adicional às categorias de produtos.
+    columns:
+      - name: ID_SUBCATEGORIA_PRODUTO
+        description: Identificador único da subcategoria do produto no sistema fonte. Serve como chave primária para esta tabela.
+      - name: ID_CATEGORIA_PRODUTO
+        description: Identificador da categoria à qual a subcategoria pertence, estabelecendo uma relação hierárquica entre as categorias e subcategorias.
+      - name: SUBCATEGORIA_PRODUTO
+        description: Nome da subcategoria do produto, por exemplo, "Smartphones", "Roupas esportivas" ou "Bebidas não alcoólicas".
