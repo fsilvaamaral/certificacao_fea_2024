@@ -9,9 +9,9 @@ with
             cast (PRODUCTID as int) as id_produto
             , cast (NAME as varchar) as produto
             , cast (COLOR as varchar) as cor_produto
-            , cast (STANDARDCOST as varchar) as custo_padrao_produto
-            , cast (LISTPRICE as varchar) as preco_lista_produto
-            , cast (PRODUCTSUBCATEGORYID as varchar) as id_subcategoria_produto
+            , cast (STANDARDCOST as float) as custo_padrao_produto
+            , cast (LISTPRICE as float) as preco_lista_produto
+            , cast (PRODUCTSUBCATEGORYID as int) as id_subcategoria_produto
             , cast (PRODUCTNUMBER as varchar) as numero_produto
             --, cast (MAKEFLAG as varchar) as 
             --, cast (FINISHEDGOODSFLAG as varchar) as 

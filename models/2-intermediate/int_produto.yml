@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: int_produto
+    description: Tabela intermediária que contém os dados dos produtos, consolidando informações de várias tabelas staging e preparando os dados para a criação da dimensão de produto.
+    columns:
+      - name: ID_PRODUTO
+        description: Identificador único do produto no sistema. Serve como chave primária para esta tabela e será utilizado como chave natural na dimensão de produto.
+      - name: PRODUTO
+        description: Nome completo e descritivo do produto.
+      - name: COR_PRODUTO
+        description: Cor principal do produto, utilizada para segmentação e análise de produtos por cor.
+      - name: NUMERO_PRODUTO
+        description: Número de identificação do produto no sistema de gestão de estoque.
+      - name: CATEGORIA_PRODUTO
+        description: Categoria à qual o produto pertence, permitindo agrupar produtos por categoria para análise.
+      - name: SUBCATEGORIA_PRODUTO
+        description: Subcategoria à qual o produto pertence, fornecendo um nível de detalhamento adicional à categoria.
