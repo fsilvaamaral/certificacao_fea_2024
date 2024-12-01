@@ -28,5 +28,13 @@ sources:
             tests:
               - unique
               - not_null
+
+      - name: productsubcategory
+        description: Dados da fonte das subcategorias dos produtos.
+        columns:
+          - name: productsubcategoryid
+            tests:
+              - unique
+              - not_null
                   
                   
