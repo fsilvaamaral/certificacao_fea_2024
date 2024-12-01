@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: int_cliente
+    description: Tabela intermediária que combina informações de clientes e pessoas, servindo como base para a criação da dimensão cliente.
+    columns:
+      - name: ID_ENTIDADE_NEGOCIO
+        description: Identificador único da entidade de negócio (pessoa) relacionado ao cliente, como definido no sistema ERP.
+      - name: ID_PESSOA_CLIENTE
+        description: Identificador único do cliente na tabela de clientes. Serve como chave estrangeira para a ligação com a dimensão cliente.
+      - name: TIPO_PESSOA
+        description: Tipo de pessoa.
+      - name: NOME_COMPLETO
+        description: Nome completo do cliente, concatenando primeiro nome, nome do meio e sobrenome.
+      - name: PRIMEIRO_NOME
+        description: Primeiro nome do cliente.
+      - name: NOME_DO_MEIO
+        description: Nome do meio do cliente (se houver).
+      - name: SOBRENOME
+        description: Sobrenome do cliente.
+      - name: ID_LOJA_CLIENTE
+        description: Identificador da loja à qual o cliente está associado.
+      - name: ID_TERRITORIO_CLIENTE
+        description: Identificador do território de vendas ao qual o cliente pertence.

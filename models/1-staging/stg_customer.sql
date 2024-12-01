@@ -6,10 +6,10 @@ with
 
     , renomeando as (
         select
-            cast (CUSTOMERID as int) as pk_cliente
-            , cast (PERSONID as int) as id_cliente
-            , cast (STOREID as int) as id_loja
-            , cast (TERRITORYID as int) as id_territorio
+            cast (CUSTOMERID as int) as id_cliente_fonte
+            , cast (PERSONID as int) as id_pessoa_cliente
+            , cast (STOREID as int) as id_loja_cliente
+            , cast (TERRITORYID as int) as id_territorio_cliente
             -- , ROWGUID
             -- , MODIFIEDDATE 
         from fonte
