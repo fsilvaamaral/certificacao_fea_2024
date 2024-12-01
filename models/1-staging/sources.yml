@@ -36,5 +36,13 @@ sources:
             tests:
               - unique
               - not_null
+
+      - name: product
+        description: Dados da fonte dos dados de produtos.
+        columns:
+          - name: productid
+            tests:
+              - unique
+              - not_null
                   
                   
