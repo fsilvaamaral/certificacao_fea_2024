@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: stg_person
+    description: Tabela staging que contém os dados brutos de pessoas, originários do sistema ERP. Esta tabela serve como base para as próximas transformações e análises.
+    columns:
+      - name: ID_ENTIDADE_NEGOCIO
+        description: Identificador único da entidade de negócio (pessoa) no sistema ERP.
+      - name: TIPO_PESSOA
+        description: Tipo de pessoa (cliente, empregado, etc), conforme classificado no sistema ERP.
+      - name: NOME_COMPLETO
+        description: Nome completo da pessoa, formado pela concatenação do primeiro nome, nome do meio (se houver) e sobrenome.
+      - name: PRIMEIRO_NOME
+        description: Primeiro nome da pessoa.
+      - name: NOME_DO_MEIO
+        description: Nome do meio da pessoa (se houver).
+      - name: SOBRENOME
+        description: Sobrenome da pessoa.
