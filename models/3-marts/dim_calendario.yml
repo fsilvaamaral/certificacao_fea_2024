@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: dim_calendario
+    description: Dimensão que fornece um calendário completo para análises temporais.
+    columns:
+      - name: DATA
+        description: Data completa no formato YYYY-MM-DD. Representa a chave primária da dimensão.
+        tests:
+          - unique
+          - not_null
+      - name: ANO
+        description: Ano da data.
+      - name: TRIMESTRE
+        description: Número do trimestre (1-4) ao qual a data pertence.
+      - name: MES
+        description: Número do mês (1-12) da data.
+      - name: NOME_MES
+        description: Nome completo do mês (Janeiro, Fevereiro, etc.).
+      - name: DIA_MES
+        description: Dia do mês (1-31).
+      - name: DIA_SEMANA
+        description: Número do dia da semana (1-7), onde 1 geralmente representa domingo.
+      - name: NOME_DIA_SEMANA
+        description: Nome completo do dia da semana (Domingo, Segunda, etc.).
+      - name: FL_MEIO_SEMANA
+        description: Indica se o dia é um dia útil (segunda a sexta, TRUE) ou não (FALSE).
+      - name: FL_FINAL_SEMANA
+        description: Indica se o dia é um fim de semana (sábado ou domingo, TRUE) ou não (FALSE).
