@@ -45,4 +45,10 @@ sources:
               - unique
               - not_null
                   
-                  
+      - name: address
+        description: Dados da fonte de endereços.
+        columns:
+          - name: addressid
+            tests:
+              - unique
+              - not_null

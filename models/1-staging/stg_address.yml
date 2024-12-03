@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: stg_address
+    description: Tabela staging que contém os dados brutos de endereços antes do processamento.
+    columns:
+      - name: ID_ENDERECO
+        description: Identificador único para cada registro de endereço, gerado automaticamente pelo sistema.
+      - name: ENDERECO
+        description: Logradouro completo do endereço, incluindo rua, avenida, etc. Pode conter informações adicionais como número, complemento e bairro.
+      - name: COMPLEMENTO_ENDERECO
+        description: Informações complementares ao endereço, como apartamento, bloco, etc.
+      - name: CIDADE
+        description: Nome da cidade onde o endereço está localizado.
+      - name: ID_ESTADO
+        description: Identificador único que referencia a tabela de dimensão de estados, permitindo relacionar o endereço ao estado correspondente.
+      - name: CODIGO_POSTAL
+        description: Código postal associado ao endereço, utilizado para fins de entrega e geolocalização.
+      - name: GEOLOCALIZACAO
+        description: Coordenadas geográficas (latitude e longitude) do endereço, representadas em um formato específico (como WKT ou GeoJSON), permitindo a visualização em mapas e análises espaciais.
