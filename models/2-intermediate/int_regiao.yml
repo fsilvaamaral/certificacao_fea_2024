@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: int_regiao
+    description: Tabela intermediária que estabelece a relação entre endereços e regiões geográficas.
+    columns:
+      - name: ID_ENDERECO
+        description: Identificador único do endereço na tabela de endereços.
+      - name: ENDERECO
+        description: Logradouro completo do endereço, incluindo rua, avenida, etc.
+      - name: COMPLEMENTO_ENDERECO
+        description: Informações complementares ao endereço, como número, apartamento, etc.
+      - name: CIDADE
+        description: Nome da cidade onde o endereço está localizado.
+      - name: ID_ESTADO
+        description: Identificador único do estado na tabela de estados, utilizado para relacionar o endereço ao estado.
+      - name: CODIGO_ESTADO
+        description: Código do estado, utilizado para identificar o estado de forma concisa.
+      - name: ESTADO
+        description: Nome completo do estado.
+      - name: ID_TERRITORIO
+        description: Identificador único do território na tabela de territórios, utilizado para relacionar o endereço a um território maior.
+      - name: CODIGO_REGIAO_PAIS
+        description: Código da região ou país, utilizado para identificar a região geográfica mais ampla à qual o endereço pertence.
+      - name: PAIS
+        description: Nome do país onde o endereço está localizado.

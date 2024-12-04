@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: dim_regiao
+    description: Dimensão que contém todas as informações relevantes sobre endereços e suas respectivas regiões geográficas.
+    columns:
+      - name: ID_ENDERECO
+        description: Identificador único de cada endereço, utilizado como chave primária da dimensão.
+        tests:
+          - unique
+          - not_null
+      - name: ENDERECO
+        description: Logradouro completo do endereço (rua, avenida, etc.).
+      - name: COMPLEMENTO_ENDERECO
+        description: Informações complementares ao endereço (número, apartamento, etc.).
+      - name: CIDADE
+        description: Nome da cidade onde o endereço está localizado.
+      - name: ID_ESTADO
+        description: Identificador único do estado, utilizado para relacionar o endereço ao estado.
+      - name: CODIGO_ESTADO
+        description: Código do estado (sigla ou código numérico) para identificação concisa.
+      - name: ESTADO
+        description: Nome completo do estado.
+      - name: SIGLA_PAIS
+        description: Sigla do país, utilizada para identificar o país de forma concisa.
+      - name: PAIS
+        description: Nome completo do país.
+      - name: ID_TERRITORIO
+        description: Identificador único do território, utilizado para agrupar endereços em regiões geográficas maiores.

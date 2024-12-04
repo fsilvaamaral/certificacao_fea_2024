@@ -45,4 +45,26 @@ sources:
               - unique
               - not_null
                   
-                  
+      - name: address
+        description: Dados da fonte de endereços.
+        columns:
+          - name: addressid
+            tests:
+              - unique
+              - not_null
+
+      - name: stateprovince
+        description: Dados da fonte dos estados.
+        columns:
+          - name: STATEPROVINCEID
+            tests:
+              - unique
+              - not_null
+
+      - name: countryregion
+        description: Dados da fonte dos países.
+        columns:
+          - name: COUNTRYREGIONCODE
+            tests:
+              - unique
+              - not_null

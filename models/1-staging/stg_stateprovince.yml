@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: stg_stateprovince
+    description: Tabela staging que contém os dados brutos de estados e províncias antes do processamento.
+    columns:
+      - name: ID_ESTADO
+        description: Identificador único para cada estado ou província, gerado automaticamente pelo sistema.
+      - name: CODIGO_ESTADO
+        description: Código oficial do estado ou província, utilizado para identificação em sistemas externos.
+      - name: CODIGO_REGIAO_PAIS
+        description: Código da região ou país ao qual o estado ou província pertence, utilizado para agrupar os estados por regiões geográficas maiores.
+      - name: ESTADO
+        description: Nome completo do estado ou província.
+      - name: ID_TERRITORIO
+        description: Identificador único que referencia a tabela de dimensão de territórios, permitindo relacionar o estado ou província a um território específico (por exemplo, um país ou uma região).
