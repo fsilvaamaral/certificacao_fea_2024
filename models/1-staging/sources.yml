@@ -52,3 +52,11 @@ sources:
             tests:
               - unique
               - not_null
+
+      - name: stateprovince
+        description: Dados da fonte dos estados.
+        columns:
+          - name: STATEPROVINCEID
+            tests:
+              - unique
+              - not_null
