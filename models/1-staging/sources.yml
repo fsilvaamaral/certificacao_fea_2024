@@ -60,3 +60,11 @@ sources:
             tests:
               - unique
               - not_null
+
+      - name: countryregion
+        description: Dados da fonte dos países.
+        columns:
+          - name: COUNTRYREGIONCODE
+            tests:
+              - unique
+              - not_null

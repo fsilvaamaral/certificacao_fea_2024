@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: stg_countryregion
+    description: Tabela staging que contém os dados brutos de países e regiões antes do processamento.
+    columns:
+      - name: CODIGO_REGIAO_PAIS
+        description: Código único que identifica a região ou o país ao qual o estado ou província pertence.
+      - name: PAIS
+        description: Nome completo do país ou região.
