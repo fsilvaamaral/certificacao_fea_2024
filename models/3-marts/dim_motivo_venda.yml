@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: dim_motivo_venda
+    description: Tabela dimensão dos motivos da venda.
+    columns:
+      - name: ID_PEDIDO
+        description: Identificador do pedido de venda, referenciando a tabela de pedidos.
+        tests:
+          - not_null
+      - name: ID_MOTIVO_VENDA
+        description: Identificador do motivo de venda.
+      - name: MOTIVO_VENDA
+        description: Descrição textual do motivo da venda.
+      - name: TIPO_MOTIVO
+        description: Tipo ou categoria do motivo da venda.
