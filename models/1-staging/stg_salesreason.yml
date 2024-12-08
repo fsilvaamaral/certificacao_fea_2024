@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: stg_salesreason
+    description: Tabela staging que armazena os dados brutos dos motivos de venda.
+    columns:
+      - name: ID_MOTIVO_VENDA
+        description: Identificador único de cada motivo de venda, utilizado como chave primária.
+      - name: MOTIVO_VENDA
+        description: Descrição textual do motivo da venda, de forma clara e concisa.
+      - name: TIPO_MOTIVO
+        description: Categoria ou tipo do motivo da venda, utilizado para agrupar motivos semelhantes, por exemplo promoção, desconto, necessidade do cliente.

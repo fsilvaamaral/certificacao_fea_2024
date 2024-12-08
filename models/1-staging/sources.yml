@@ -74,5 +74,13 @@ sources:
         columns:
           - name: SALESORDERID
             tests:
+              - not_null
+
+      - name: salesreason
+        description: Dados da fonte de motivos de venda.
+        columns:
+          - name: SALESREASONID
+            tests:
               - unique
               - not_null
+
