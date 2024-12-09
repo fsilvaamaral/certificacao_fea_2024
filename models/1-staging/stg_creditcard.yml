@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: stg_creditcard
+    description: Tabela staging que armazena os dados brutos dos cartões de crédito, como número do cartão, data de vencimento, etc.
+    columns:
+      - name: ID_CARTAO_CREDITO
+        description: Identificador único de cada cartão de crédito, utilizado como chave primária.
+      - name: CARTAO_CREDITO
+        description: Nome ou tipo do cartão de crédito (ex Visa, Mastercard).
+      - name: NUMERO_CARTAO
+        description: Número completo do cartão de crédito.
+      - name: MES_VENCIMENTO_CARTAO
+        description: Mês de vencimento do cartão de crédito (1-12).
+      - name: ANO_VENCIMENTO_CARTAO
+        description: Ano de vencimento do cartão de crédito.
