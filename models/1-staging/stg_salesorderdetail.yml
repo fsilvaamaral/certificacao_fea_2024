@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: stg_salesorderdetail
+    description: Tabela staging que armazena os detalhes de cada item de um pedido de venda, incluindo quantidade, produto, preço unitário e descontos.
+    columns:
+      - name: ID_PEDIDO
+        description: Identificador único do pedido ao qual o item pertence, referenciando a tabela de cabeçalhos dos pedidos.
+      - name: ID_PEDIDO_DETALHADO
+        description: Identificador único de cada linha do pedido (cada item), utilizado como chave primária.
+      - name: QUANTIDADE_PEDIDO
+        description: Quantidade do produto solicitada no pedido.
+      - name: ID_PRODUTO
+        description: Identificador único do produto, referenciando a tabela de produtos.
+      - name: PRECO_UNITARIO
+        description: Preço unitário do produto no momento da venda.
+      - name: DESCONTO_PRECO_UNITARIO
+        description: Valor do desconto aplicado ao preço unitário do produto.
