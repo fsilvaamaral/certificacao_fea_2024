@@ -20,8 +20,8 @@ with
             , fonte_pessoa.sobrenome
             , fonte_cliente.id_loja_cliente
             , fonte_cliente.id_territorio_cliente
-        from fonte_pessoa
-        left join fonte_cliente on fonte_pessoa.id_entidade_negocio = fonte_cliente.id_pessoa_cliente
+        from fonte_cliente
+        left join fonte_pessoa on fonte_pessoa.id_entidade_negocio = fonte_cliente.id_pessoa_cliente
         where fonte_pessoa.tipo_pessoa = 'IN'
     )
 

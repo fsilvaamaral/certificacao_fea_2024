@@ -7,6 +7,7 @@ models:
       - name: ID_PEDIDO
         description: Identificador do pedido de venda, referenciando a tabela de pedidos.
         tests:
+          - unique
           - not_null
       - name: ID_MOTIVO_VENDA
         description: Identificador do motivo de venda.
