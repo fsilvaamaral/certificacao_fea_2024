@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: int_vendas
+    description: Tabela intermediária que agrega informações detalhadas sobre os itens de cada pedido de venda, incluindo dados do pedido, do cliente e do pagamento.
+    columns:
+      - name: ID_PEDIDO_DETALHADO
+        description: Identificador único de cada item de um pedido, utilizado como chave primária.
+      - name: ID_PEDIDO
+        description: Identificador único do pedido ao qual o item pertence, referenciando a tabela de cabeçalhos dos pedidos.
+      - name: QUANTIDADE_PEDIDO
+        description: Quantidade do produto solicitada no pedido.
+      - name: ID_PRODUTO
+        description: Identificador único do produto, referenciando a tabela de produtos.
+      - name: PRECO_UNITARIO
+        description: Preço unitário do produto no momento da venda.
+      - name: DESCONTO_PRECO_UNITARIO
+        description: Valor do desconto aplicado ao preço unitário do produto.
+      - name: DATA_PEDIDO
+        description: Data em que o pedido foi realizado.
+      - name: DATA_ENVIO_PEDIDO
+        description: Data prevista ou real de envio do pedido.
+      - name: STATUS_PEDIDO
+        description: Status atual do pedido (ex pendente, enviado, cancelado).
+      - name: LOCAL_VENDA
+        description: Local onde o pedido foi realizado (loja física, online, etc.).
+      - name: NUMERO_PEDIDO
+        description: Número sequencial do pedido, geralmente utilizado para identificação interna.
+      - name: ID_CLIENTE
+        description: Identificador único do cliente relacionado ao pedido, referenciando a tabela de clientes.
+      - name: ID_ENDERECO
+        description: Identificador único do endereço de entrega, referenciando a tabela de endereços.
+      - name: ID_CARTAO_CREDITO
+        description: Identificador único do cartão de crédito utilizado na compra, referenciando a tabela de cartões de crédito.
+      - name: CARTAO_CREDITO
+        description: Nome ou tipo do cartão de crédito (ex Visa, Mastercard).

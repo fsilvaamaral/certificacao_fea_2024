@@ -1,0 +1,39 @@
+version: 2
+
+models:
+  - name: fato_vendas
+    description: Tabela fato que armazena as informações detalhadas de cada item vendido, servindo como base para análises e relatórios sobre as vendas.
+    columns:
+      - name: ID_PRODUTO_PEDIDO
+        description: Identificador único de cada linha do pedido, atuando como chave primária da tabela de fatos.
+        tests:
+          - unique
+          - not_null
+      - name: ID_PEDIDO
+        description: Identificador único do pedido ao qual o item pertence, chave estrangeira para a dimensão de pedidos.
+      - name: ID_PRODUTO
+        description: Identificador único do produto vendido, chave estrangeira para a dimensão de produtos.
+      - name: ID_CLIENTE
+        description: Identificador único do cliente que realizou a compra, chave estrangeira para a dimensão de clientes.
+      - name: ID_ENDERECO
+        description: Identificador único do endereço de entrega, chave estrangeira para a dimensão de endereços.
+      - name: DATA_PEDIDO
+        description: Data em que o pedido foi realizado.
+      - name: DATA_ENVIO_PEDIDO
+        description: Data prevista ou real de envio do pedido.
+      - name: STATUS_PEDIDO
+        description: Status atual do pedido (ex pendente, enviado, cancelado).
+      - name: LOCAL_VENDA
+        description: Local onde o pedido foi realizado (loja física, online, etc.).
+      - name: CARTAO_CREDITO
+        description: Tipo de cartão de crédito utilizado na compra.
+      - name: QUANTIDADE_PEDIDO
+        description: Quantidade do produto solicitada no pedido.
+      - name: PRECO_UNITARIO
+        description: Preço unitário do produto no momento da venda.
+      - name: DESCONTO_PRECO_UNITARIO
+        description: Valor do desconto aplicado ao preço unitário do produto.
+      - name: TOTAL_BRUTO
+        description: Preço unitário multiplicado pela quantidade.
+      - name: TOTAL_LIQUIDO
+        description: Preço unitário multiplicado por (1 - descontos) multiplicado pela quantidade.

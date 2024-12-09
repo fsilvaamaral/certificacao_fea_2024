@@ -83,4 +83,27 @@ sources:
             tests:
               - unique
               - not_null
+            
+      - name: creditcard
+        description: Dados da fonte de cartão de crédito.
+        columns:
+          - name: creditcardid
+            tests:
+              - unique
+              - not_null
 
+      - name: salesorderheader
+        description: Dados da fonte de vendas.
+        columns:
+          - name: salesorderid
+            tests:
+              - unique
+              - not_null
+
+      - name: salesorderdetail
+        description: Dados da fonte de vendas.
+        columns:
+          - name: SALESORDERDETAILID
+            tests:
+              - unique
+              - not_null
