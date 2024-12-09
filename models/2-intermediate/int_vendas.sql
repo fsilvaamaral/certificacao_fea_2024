@@ -40,7 +40,7 @@ with
             , fonte_vendas.preco_unitario
             , fonte_vendas.desconto_preco_unitario
             , fonte_cabecalho.data_pedido
-            , fonte_cabecalho. data_envio_pedido
+            , fonte_cabecalho.data_envio_pedido
             , fonte_cabecalho.status_pedido
             , fonte_cabecalho.local_venda
             , fonte_cabecalho.numero_pedido
