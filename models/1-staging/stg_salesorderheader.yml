@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: stg_salesorderheader
+    description: Tabela staging que armazena os dados brutos dos cabeçalhos dos pedidos de venda, incluindo informações sobre o cliente, data do pedido, status e valores financeiros.
+    columns:
+      - name: ID_PEDIDO
+        description: Identificador único de cada pedido de venda, utilizado como chave primária.
+      - name: DATA_PEDIDO
+        description: Data em que o pedido foi realizado.
+      - name: DATA_ENVIO_PEDIDO
+        description: Data prevista ou real de envio do pedido.
+      - name: STATUS_PEDIDO
+        description: Status atual do pedido (ex pendente, enviado, cancelado).
+      - name: LOCAL_VENDA
+        description: Local onde o pedido foi realizado (loja física, online, etc.).
+      - name: NUMERO_PEDIDO
+        description: Número sequencial do pedido, geralmente utilizado para identificação interna.
+      - name: ID_CLIENTE
+        description: Identificador único do cliente relacionado ao pedido, referenciando a tabela de clientes.
+      - name: ID_FUNCIONARIO
+        description: Identificador único do funcionário que processou o pedido, referenciando a tabela de funcionários.
+      - name: ID_TERRITORIO
+        description: Identificador único do território de venda, referenciando a tabela de territórios.
+      - name: ID_ENDERECO
+        description: Identificador único do endereço de entrega, referenciando a tabela de endereços.
+      - name: ID_CARTAO_CREDITO
+        description: Identificador único do cartão de crédito utilizado na compra, referenciando a tabela de cartões de crédito.
+      - name: SUBTOTAL_PRODUTO
+        description: Valor total dos produtos sem impostos e frete.
+      - name: IMPOSTO_PRODUTO
+        description: Valor total dos impostos sobre os produtos.
+      - name: FRETE_PRODUTO
+        description: Valor do frete.
+      - name: TOTAL_PEDIDO
+        description: Valor total do pedido, incluindo produtos, impostos e frete.

@@ -91,3 +91,11 @@ sources:
             tests:
               - unique
               - not_null
+
+      - name: salesorderheader
+        description: Dados da fonte de vendas.
+        columns:
+          - name: salesorderid
+            tests:
+              - unique
+              - not_null
