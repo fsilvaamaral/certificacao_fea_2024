@@ -6,7 +6,7 @@ with
 
     , dim_cliente as (
         select
-            id_entidade_negocio as pk_cliente
+            id_pessoa_cliente as id_cliente
             , nome_completo
             , id_loja_cliente
             , id_territorio_cliente
