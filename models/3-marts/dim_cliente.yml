@@ -4,7 +4,7 @@ models:
   - name: dim_cliente
     description: Tabela dimensão que contém informações detalhadas sobre os clientes, como nome completo, loja e território.
     columns:
-      - name: PK_CLIENTE
+      - name: ID_CLIENTE
         description: Chave primária única que identifica cada cliente de forma exclusiva na tabela.
         tests:
           - unique
