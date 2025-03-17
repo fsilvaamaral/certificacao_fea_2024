@@ -3,7 +3,7 @@ version: 2
 sources:
   - name: erp
     description: Sistema de dados de venda da Adventure Works
-    database: fea24_9
+    database: fea24_11
     schema: raw_adventure_works
     tables:
       - name: customer
